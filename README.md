@@ -7,7 +7,7 @@ To run the application and enjoy chatting, you need just to download the project
 ```
 npm run start
 ```
-in the command line in the project directory. 
+in the command line in the project directory, then go to the localhost:8080 and... that`s it! 
 
 ### How it works
 Currently there is a public chat accessible for all visitors in read-only mode. To be able to send messages, it is enough just to log in with a unique username. You can keep chatting privately with any online user you want or make contributions to the public chat. There is a possibility to edit your messages, but not later than a minute after the publishing. 
