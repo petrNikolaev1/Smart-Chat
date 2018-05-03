@@ -1,0 +1,14 @@
+{
+  "username": "Petr Nikolaev",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.0.1",
+    "react-addons-css-transition-group": "^15.6.2",
+    "reconnecting-websocket": "^3.2.2",
+    "ws": "^5.1.1"
+  }
+}

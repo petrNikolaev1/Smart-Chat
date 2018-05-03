@@ -1,0 +1,46 @@
+{
+  "username": "PetrNikolaev",
+  "version": "1.0.0",
+  "description": "Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "webpack-dev-server --colors --progress"
+  },
+  "author": "Petr Nikolaev",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-react-html-attrs": "^2.1.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.22.0",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.14.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^6.9.0",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.26.0",
+    "node-sass": "^4.3.0",
+    "react-hot-loader": "^3.1.3",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "key-mirror": "^1.0.1",
+    "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.7",
+    "reconnecting-websocket": "^3.2.2",
+    "redux": "^3.7.2"
+  }
+}
