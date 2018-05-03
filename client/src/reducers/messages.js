@@ -38,7 +38,6 @@ const messagesReducer = (state = [], action) => {
 
 		case constants.RECEIVE_EDITED:
 			editedMessages = getData(action.data)
-			console.log('REDUCER', editedMessages)
 			return Array.from(editedMessages)
 
 		case constants.DISABLE_EDIT:
