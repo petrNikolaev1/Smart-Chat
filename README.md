@@ -12,7 +12,7 @@ in the command line in the project directory, then go to localhost:8080 in your 
 ### How it works
 Currently there is a public chat accessible for all visitors in read-only mode. To be able to send messages, it is enough just to log in with a unique username. You can keep chatting privately with any online user you want or make contributions to the public chat. There is a possibility to edit your messages, but not later than a minute after the publishing.
 
-# JavaScript for Enterprise Development - Introduction
+# JavaScript for Enterprise Development
 
 ## Why did I choose this project?
 Initially this project was my internship test assignment and it was supposed to be buried in oblivion afterwards.
