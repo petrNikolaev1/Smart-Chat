@@ -33,4 +33,4 @@ for appropriate representation on different screen sizes.
 required to be changed (in order not to be ashamed).
 4. Add new functionality. Implement a Telegram-like reply function (currently only edit function implemented). Implement
 the files sending. Implement a message queue for the case of a connection teardown. And implement another interesting things
-that probably occur into my mind.
+that will probably occur to my mind.
