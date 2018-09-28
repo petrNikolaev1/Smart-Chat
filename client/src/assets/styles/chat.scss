@@ -1,6 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
-
 $green: #86BB71;
 $blue: #94C2ED;
 $orange: #E38968;
@@ -8,37 +5,6 @@ $gray: #92959E;
 $cross: darkgrey;
 $edited-text: #444753;
 $edited-back: silver;
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-.fade-enter {
-  opacity: 0;
-}
-
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 300ms ease-out;
-}
-
-.fade-leave {
-  opacity: 1;
-}
-
-.fade-leave-active {
-  opacity: 0;
-  transition: opacity 300ms ease-out;
-}
-
-.fade-appear {
-  opacity: 0;
-}
-
-.fade-appear-active {
-  opacity: 1;
-  transition: opacity 1000ms ease-out;
-}
 
 @keyframes color-change {
   0% {
@@ -88,134 +54,11 @@ $edited-back: silver;
     margin: 0 0 0 0;
   }
 }
-
-body {
-  background: #C5DDEB;
-  font: 14px/20px "Lato", Arial, sans-serif;
-  padding: 40px 0;
-  color: white;
-}
-
 .container {
   margin: 0 auto;
   width: 1000px;
   background: #444753;
   border-radius: 5px;
-}
-
-.inline {
-  display: inline-block;
-  float: left;
-
-  .chat-user {
-    word-break: break-all;
-    max-width: 260px;
-    overflow: hidden;
-    /* Multiline */
-    height: auto;
-    min-height: 87px;
-
-    /* Single line */
-    //height: 87px;
-    //white-space: nowrap;
-    //overflow: hidden;
-    //text-overflow: ellipsis;
-
-    line-height: 48px;
-    padding: 20px;
-    font-size: 20px;
-    background: #bababa;
-    border-bottom: 2px solid white;
-  }
-}
-
-.login {
-  width: 260px;
-  button {
-    display: inline-block;
-    height: 42px;
-    width: 100%;
-    transition: 0.3s;
-  }
-
-  button:hover{
-    background: darken(#e8e8e8,7%);
-    cursor: pointer;
-  }
-
-  padding: 20px;
-  input {
-    margin-bottom: 10px;
-    border-radius: 3px;
-    border: none;
-    padding: 14px;
-    color: white;
-    background: #6A6C75;
-    width: 220px;
-    font-size: 14px;
-
-  }
-  ::placeholder {
-    color: #C5DDEB;
-  }
-}
-
-.people-list {
-  width: 260px;
-  float: left;
-
-  .chat-user {
-    font-size: 16px;
-    font-style: oblique;
-    margin-top: 6px;
-  }
-
-  .fa-search {
-    position: relative;
-    left: -25px;
-  }
-
-  ul {
-    padding: 20px;
-    height: 770px;
-
-    li {
-      word-break: break-all;
-      max-width: 260px;
-      overflow: hidden;
-      height: auto;
-
-
-      //overflow: hidden;
-      //text-overflow: ellipsis;
-      padding-bottom: 20px;
-    }
-
-    li:hover {
-      background: linear-gradient(to bottom right, #bababa, darken(#bababa, 20%));
-      border-radius: 7px;
-      cursor: pointer;
-    }
-  }
-
-  img {
-    width: 50px;
-    float: left;
-  }
-
-  .about {
-    float: left;
-    margin-top: 8px;
-  }
-
-  .about {
-    padding-left: 8px;
-  }
-
-  .status {
-    color: $gray;
-  }
-
 }
 
 .chat {
@@ -413,42 +256,3 @@ body {
     }
   }
 }
-
-.online, .offline, .me {
-  margin-right: 3px;
-  font-size: 10px;
-}
-
-.online {
-  color: $green;
-}
-
-.offline {
-  color: $orange;
-}
-
-.me {
-  color: $blue;
-}
-
-.align-left {
-  text-align: left;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.float-right {
-  float: right;
-}
-
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
-

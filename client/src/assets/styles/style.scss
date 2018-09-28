@@ -1,23 +1,12 @@
-body {
-	margin: 0;
-	padding: 0;
-}
-
-ul {
-	list-style-type: none;
-}
-
 .noname-wrap {
-	text-align: center;
-	padding: 30px;
-	font-size: 23px;
+  text-align: center;
+  padding: 30px;
+  font-size: 23px;
 
-	& button {
-		font-size: 20px;
-		padding: 5px 25px;
-		margin-top: 20px;
-		border-radius: 0;
-	}
+  & button {
+    font-size: 20px;
+    padding: 5px 25px;
+    margin-top: 20px;
+    border-radius: 0;
+  }
 }
-
-@import 'chat';

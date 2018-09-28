@@ -1,4 +1,5 @@
 import {combineReducers} from 'redux'
+
 import messagesReducer from './messages'
 import peopleReducer from './people'
 import loginReducer from './login'
@@ -11,10 +12,6 @@ import publicTypingReducer from './publicTyping'
 import privateTypingReducer from './privateTyping'
 import loginInfoReducer from './loginInfo'
 import chatWithReducer from './chatWith'
-
-/*
-Reducers
- */
 
 const chatReducer = combineReducers({
 	loginReducer,
@@ -29,7 +26,7 @@ const chatReducer = combineReducers({
 	privateTypingReducer,
 	loginInfoReducer,
 	chatWithReducer
-})
+});
 
 export default chatReducer
 

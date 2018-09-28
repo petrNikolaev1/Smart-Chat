@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
-import ws from 'util/ws'
-import constants from 'constants'
+
+import ws from '@/util/ws'
+import constants from '@/constants'
 
 /*
 Component responsible for interactions with the Text Area

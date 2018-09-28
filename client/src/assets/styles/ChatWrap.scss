@@ -1,0 +1,133 @@
+$green: #2ECC40;
+$blue: #94C2ED;
+$orange: #E38968;
+$gray: #92959E;
+$cross: darkgrey;
+$edited-text: #444753;
+$edited-back: silver;
+$darkenWhite10: #e5e5e5;
+$darkenWhite20: #cccccc;
+$darkenWhite30: #b2b2b2;
+$darkenWhite40: #999999;
+$darkenWhite50: #7f7f7f;
+$silver: #DDDDDD;
+$formBack: #6A6C75;
+$theme: #F2F5F8;
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #434651;
+  background: #C5DDEB;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  input {
+    border: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    word-break: break-word;
+    transition: 0.3s ease-out;
+  }
+
+  button {
+    border: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    word-break: break-word;
+    transition: 0.3s ease-out;
+  }
+
+  .chat-wrap {
+    margin: 5vh auto;
+    width: 150vh;
+    height: 90vh;
+    border-radius: 1vh;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    word-break: break-word;
+
+    background-color: white;
+
+    overflow: hidden;
+
+    &-left {
+      flex-basis: 25%;
+      flex-shrink: 0;
+
+      display: flex;
+      flex-flow: column nowrap;
+    }
+    &-right {
+      flex: 1;
+      display: flex;
+      flex-flow: column nowrap;
+      background-color: $theme;
+    }
+  }
+
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-out;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-appear-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-out;
+}
+
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white) {
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount;
+  text-align: justify;
+  //margin-right: -1em;
+  padding-right: 1em;
+  &:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
+}

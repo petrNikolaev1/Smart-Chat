@@ -1,4 +1,4 @@
-import constants from 'constants'
+import constants from '../constants'
 
 const chatControlEditReducer = (state = {flag: false, id: null, data: null} , action) => {
 

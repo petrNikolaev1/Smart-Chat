@@ -1,4 +1,4 @@
-import constants from 'constants'
+import constants from '@/constants'
 
 function updateState(state, from, flag) {
 	for (var i = 0; i < state.length; i++) {

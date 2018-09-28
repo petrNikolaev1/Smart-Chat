@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import ContextMenu from 'components/ContextMenu'
+
+import ContextMenu from '@/components/ContextMenu'
 
 /*
 Component representing a Message.

@@ -1,0 +1,25 @@
+@import "ChatWrap.scss";
+
+.chat-header {
+  padding: 2vh 3vh;
+  flex-basis: 11vh;
+  flex-shrink: 0;
+
+  border-bottom: 0.2vh solid white;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+
+  &-name {
+    $lineHeight: 4.8vh;
+    font-size: 4vh;
+    line-height: $lineHeight;
+    max-height: $lineHeight *1;
+    overflow: hidden;
+    word-break: break-all;
+  }
+  &-typing {
+    font-size: 2.5vh;
+  }
+}

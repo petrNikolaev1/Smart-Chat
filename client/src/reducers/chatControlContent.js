@@ -1,4 +1,4 @@
-import constants from 'constants'
+import constants from '@/constants'
 
 function findIndexById(state, id) {
 	for (var i = 0; i < state.length; i++) {

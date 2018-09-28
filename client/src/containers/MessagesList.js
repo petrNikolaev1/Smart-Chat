@@ -1,11 +1,12 @@
-import React, {Component} from 'react'
-import ChatHeader from 'components/ChatHeader'
-import MessageItem from 'components/MessageItem'
-import ChatControl from 'components/ChatControl'
+import React, {Component, Fragment} from 'react'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
-import {contextMenuOpen, contextMenuEdit, markEditedMessage, chatControlContent, markMessage} from 'actions'
-import constants from 'constants'
+
+import ChatHeader from '@/components/ChatHeader'
+import MessageItem from '@/components/MessageItem'
+import ChatControl from '@/components/ChatControl'
+import {contextMenuOpen, contextMenuEdit, markEditedMessage, chatControlContent, markMessage} from '@/actions'
+import constants from '@/constants'
 
 /*
 Container that is responsible for representing chat appropriately:
@@ -93,7 +94,7 @@ class MessagesList extends Component {
 		const mark = this.props.markedMessage
 
 		return (
-			<div className="chat">
+			<Fragment>
 				<ChatHeader typing={this.props.chatWith === constants.MAIN_PUBLIC_CHAT ?
 					this.props.publicTyping : this.getPrivateTypingInfo(this.props.chatWith)}
 							name={this.props.chatWith}/>
@@ -128,7 +129,7 @@ class MessagesList extends Component {
 					chatControlContent={this.shouldChatControlUpdate ? content : null}
 					handleMarkedMessage={this.props.handleMarkedMessage}
 				/> : null}
-			</div>
+			</Fragment>
 		)
 	}
 
