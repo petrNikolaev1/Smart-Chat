@@ -13,12 +13,18 @@ $darkenWhite50: #7f7f7f;
 $silver: #DDDDDD;
 $formBack: #6A6C75;
 $theme: #F2F5F8;
+$mainBackColor:  #C5DDEB;
 
 body {
   margin: 0;
   padding: 0;
   color: #434651;
-  background: #C5DDEB;
+  background: $mainBackColor;
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
 
   ul {
     list-style: none;

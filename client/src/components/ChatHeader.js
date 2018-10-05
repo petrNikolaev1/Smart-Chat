@@ -1,7 +1,10 @@
 import React, {Component} from 'react'
+import {Settings} from '@material-ui/icons'
 
 import constants from '@/constants'
 import '@/assets/styles/ChatHeader.scss'
+
+import {Link} from 'react-router-dom'
 
 const TYPING_NUM = 4
 
@@ -42,13 +45,17 @@ export default class UserItem extends Component {
     render() {
         return (
             <div className="chat-header">
+                <div className='chat-header-info'>
                     <div id="test" className="chat-header-name">
                         {this.getUserName()}
                     </div>
                     <div className='chat-header-typing'>
                         {/*{this.getTypingInfo(this.props.typing)}*/}
-                        Василий печатает...
                     </div>
+                </div>
+                <div className='chat-header-settings'>
+                    <Link to={'/settings/'}><Settings/></Link>
+                </div>
             </div>
         )
     }
