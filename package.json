@@ -9,5 +9,8 @@
     "dev": "concurrently --kill-others-on-fail \"npm run server-dev\" \"npm run client-dev\"",
     "postinstall": "cd client && npm i && cd .. && cd server && npm i",
     "build": "concurrently --kill-others-on-fail \"npm run server-build\" \"npm run client-build\""
+  },
+  "dependencies": {
+    "concurrently": "^4.0.1"
   }
 }
