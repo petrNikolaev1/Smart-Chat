@@ -1,39 +1,35 @@
 import React, {Component} from 'react'
 
-/*
-Component representing authorization field.
- */
+import '@/assets/styles/Login.scss'
 
 export default class Login extends Component {
 
-	auth(handleLogin) {
-		const name = document.getElementById('login').value
-		if (!name || !name.trim().length) {
-			return
-		}
-		document.getElementById('login').value = ''
-		handleLogin(name)
-	}
+    auth = (event, handleLogin) => {
+        event.preventDefault();
+        const name = this.input.value;
+        if (!name || !name.trim().length) {
+            return
+        }
+        this.input.value = '';
+        handleLogin(name)
+    };
 
-	onEnterPress(e, handleLogin) {
-		if (e.keyCode === 13 && e.shiftKey === false) {
-			e.preventDefault();
-			this.auth(handleLogin)
-		}
-	}
-
-	render() {
-		const {handleLogin} = this.props
-		return (
-			<div className="login">
-				<input
-					onKeyDown={(e) => this.onEnterPress(e, handleLogin)}
-					id="login" type="text" placeholder="Type your name"/>
-				{/*<br/>*/}
-				<button onClick={() => this.auth(handleLogin)} type="button">Log in</button>
-			</div>
-		)
-	}
+    render() {
+        const {handleLogin} = this.props;
+        return (
+            <form className="login" onSubmit={(event) => this.auth(event, handleLogin)}>
+                <input
+                    ref={input => this.input = input}
+                    type="text"
+                    placeholder="Type your name"
+                    className='login-input'
+                />
+                <button type="submit" className='login-btn'>
+                    Log in
+                </button>
+            </form>
+        )
+    }
 }
 
 

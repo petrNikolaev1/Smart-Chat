@@ -1,0 +1,51 @@
+@import "ChatWrap.scss";
+
+.login {
+  padding: 2vh 0;
+  flex-basis: 11vh;
+  flex-shrink: 0;
+
+  border-bottom: 0.2vh solid $darkenWhite30;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  &-input {
+    width: 90%;
+    background-color: $formBack;
+    flex-basis: 5vh;
+    flex-shrink: 0;
+    padding: 0 5%;
+    font-size: 2vh;
+    box-sizing: border-box;
+    color: white;
+    border: 0.2vh solid $formBack;
+  }
+
+  &-input:focus {
+    border: 0.2vh solid $blue;
+    box-shadow: 0 0 1vh $blue;
+  }
+
+  &-input::placeholder {
+    color: #C5DDEB;
+  }
+
+  &-btn {
+    width: 90%;
+    flex-basis: 5vh;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vh;
+    color: $formBack;
+    background-color: #C5DDEB;
+  }
+  &-btn:hover {
+    cursor: pointer;
+    background-color: darken(#C5DDEB, 10%);
+  }
+}

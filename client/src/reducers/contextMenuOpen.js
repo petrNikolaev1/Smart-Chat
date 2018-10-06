@@ -1,4 +1,4 @@
-import constants from 'constants'
+import constants from '@/constants'
 
 const contextMenuOpenReducer = (state = 0, action) => {
 

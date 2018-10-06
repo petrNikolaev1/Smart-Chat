@@ -1,4 +1,4 @@
-import constants from 'constants'
+import constants from '@/constants'
 
 const loginInfoReducer = (state = null, action) => {
 	switch (action.type) {

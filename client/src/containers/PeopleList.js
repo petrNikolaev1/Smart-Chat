@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import UserItem from 'components/UserItem'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import constants from 'constants'
+
+import UserItem from '@/components/UserItem'
+import constants from '@/constants'
+import '@/assets/styles/PeopleList.scss'
 
 /*
 Container that is responsible for interactions with the

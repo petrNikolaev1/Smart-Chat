@@ -1,21 +1,16 @@
 {
-  "username": "PetrNikolaev",
-  "version": "1.0.0",
-  "description": "Smart chat",
-  "main": "index.js",
+  "name": "smartchat",
+  "version": "0.1.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:client": "cd client && npm run client",
-    "start:server": "cd server && node app.js",
-    "start": "concurrently \"npm run start:server\" \"npm run start:client\""
+    "client-dev": "cd client && npm run dev",
+    "client-build": "cd client && npm run build",
+    "server-dev": "cd server && npm run dev",
+    "server-build": "cd server && npm run build",
+    "dev": "concurrently --kill-others-on-fail \"npm run server-dev\" \"npm run client-dev\"",
+    "postinstall": "cd client && npm i && cd .. && cd server && npm i",
+    "build": "concurrently --kill-others-on-fail \"npm run server-build\" \"npm run client-build\""
   },
-  "author": "Petr Nikolaev",
-  "license": "ISC",
   "dependencies": {
-    "jquery": "^3.3.1",
-    "nw": "^0.30.0",
-    "react-addons-css-transition-group": "^15.6.2",
-    "reconnecting-websocket": "^3.2.2",
-    "redux-thunk": "^2.2.0"
+    "concurrently": "^4.0.1"
   }
 }
