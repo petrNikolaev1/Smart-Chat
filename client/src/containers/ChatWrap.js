@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux';
 
 import PeopleList from '@/containers/PeopleList'
@@ -17,7 +16,16 @@ Controls a chat change so that when a user is chosen from the PeopleList
 the corresponding info is displayed in the MessagesList.
  */
 
-class ChatWrap extends Component {
+@connect(store => ({
+        loginSuccess: store.loginReducer,
+        username: store.loginInfoReducer,
+        chatWith: store.chatWithReducer
+    }), {
+        handleLoginInfo: loginInfo,
+        handleChatWith: chatWith
+    }
+)
+export default class ChatWrap extends Component {
 
     constructor() {
         super();
@@ -72,21 +80,3 @@ class ChatWrap extends Component {
         ws.emit(JSON.stringify({type: 'connected_new_user', data: username}))
     }
 }
-
-const mapStateToProps = (state) => {
-    return {
-        loginSuccess: state.loginReducer,
-        username: state.loginInfoReducer,
-        chatWith: state.chatWithReducer
-    }
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        handleLoginInfo: bindActionCreators(loginInfo, dispatch),
-        handleChatWith: bindActionCreators(chatWith, dispatch)
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(ChatWrap)
-
