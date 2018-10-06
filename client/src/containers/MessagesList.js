@@ -8,6 +8,8 @@ import ChatControl from '@/components/ChatControl'
 import {contextMenuOpen, contextMenuEdit, markEditedMessage, chatControlContent, markMessage} from '@/actions'
 import constants from '@/constants'
 
+import '@/assets/styles/MessagesList.scss'
+
 /*
 Container that is responsible for representing chat appropriately:
 in accordance with the chosen user and previously sent messages, typed data, etc...
@@ -46,7 +48,7 @@ class MessagesList extends Component {
 		if (nextProps.markedMessage !== this.props.markedMessage) {
 			this.setState({class: ''})
 			setTimeout(() => {
-				this.setState({class: 'marked-message'})
+				this.setState({class: 'message-marked'})
 			}, 0)
 		}
 

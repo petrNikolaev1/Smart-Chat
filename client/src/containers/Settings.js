@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 
+import '@/assets/styles/Settings.scss'
+
 export default class ChatWrap extends Component {
     render() {
         return (
