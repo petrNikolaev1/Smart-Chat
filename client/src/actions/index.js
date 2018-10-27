@@ -59,7 +59,7 @@ export const connectedNewUser = ({userID, username}) => {
 
 export const rejectAuth = (flag) => {
 	return {
-		type: constants.AUTH,
+		type: constants.LOGIN_SUCCESS,
 		flag
 	}
 }
