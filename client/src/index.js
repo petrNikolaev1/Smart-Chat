@@ -8,8 +8,6 @@ import {BrowserRouter as Router} from 'react-router-dom'
 
 import ws from '@/util/ws'
 import {getStoreObj} from "@/store";
-import '@/assets/styles/chat.scss'
-import '@/assets/styles/style.scss'
 
 ws.emit(JSON.stringify({type: 'connected_new_observer'}));
 

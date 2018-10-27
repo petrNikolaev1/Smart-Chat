@@ -1,0 +1,31 @@
+@import "index.scss";
+
+.context-menu {
+  position: fixed;
+  background: white;
+  box-shadow: 0 0.3vh 1vh #999999;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  &-option {
+    padding: 1vh 2vh;
+    min-width: 20vh;
+
+    font-size: 2vh;
+
+    transition: 0.3s ease-in;
+
+    &:hover {
+      background: darken($blue, 7%);
+      color: white;
+      cursor: pointer;
+    }
+
+    &-disabled {
+      cursor: initial;
+      color: #999999;
+      pointer-events: none;
+    }
+  }
+}

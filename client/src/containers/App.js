@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router-dom'
 
 import ChatWrap from '@/containers/ChatWrap'
 import Settings from '@/containers/Settings'
+import '@/assets/styles/index.scss'
 
 export default () =>
     (<Switch>

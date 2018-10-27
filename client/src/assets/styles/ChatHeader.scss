@@ -1,4 +1,4 @@
-@import "ChatWrap.scss";
+@import "index.scss";
 
 .chat-header {
   padding: 2vh 3vh;
@@ -34,18 +34,25 @@
     align-self: stretch;
     flex-shrink: 0;
     flex-basis: 11.5%;
-    background: $mainBackColor;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    svg {
-      fill: $formBack;
-      font-size: 8vh;
-    }
+
     transition: 0.5s ease-out;
-  }
-  &-settings:hover {
-    cursor: pointer;
-    background: darken($mainBackColor, 10%);
+
+    svg {
+      fill: $blue;
+      font-size: 8vh;
+      transition: 0.5s ease-out;
+
+      &:hover {
+        fill: darken($blue, 15%);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
