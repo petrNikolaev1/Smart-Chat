@@ -15,5 +15,6 @@ export default keyMirror({
 	PUBLIC_TYPING: null,
 	PRIVATE_TYPING: null,
 	LOGIN_INFO: null,
-	CHAT_WITH: null
+	CHAT_WITH: null,
+    CHANGE_LANG: null,
 })

@@ -1,12 +1,76 @@
 @import "index.scss";
 
-.test {
+.settings {
+  $horPadding: 3vh;
+
+  width: 150vh;
+  height: 90vh;
+  margin: 5vh auto;
+
+  font-size: 3.5vh;
+
+  border-radius: 1vh;
+  background: white;
+
   display: flex;
   flex-flow: column nowrap;
 
-  &-item {
-    align-self: flex-end;
-    background: white;
-    width: fit-content;
+  &-header {
+    padding: 2vh $horPadding;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 0.2vh solid $darkenWhite30;
+    &-title {
+      font-size: 4.5vh;
+    }
+    &-btn {
+      color: white;
+      flex-basis: auto;
+      padding: 2vh 3vh;
+      background: $blue;
+      cursor: pointer;
+      transition: 0.5s ease-out;
+
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+
+      svg {
+        font-size: 4vh;
+        margin-right: 1vh;
+      }
+
+      &:hover {
+        background: darken($blue, 15%);
+      }
+    }
+  }
+  &-body {
+    padding: 0 $horPadding;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    &-form {
+      margin-top: 4vh;
+      width: 50%;
+
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+
+      &-label {
+        flex-basis: auto;
+        margin-right: 5%;
+      }
+
+      &-value {
+        flex: 1;
+      }
+    }
   }
 }
