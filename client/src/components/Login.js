@@ -1,26 +1,31 @@
 import React, {Component} from 'react'
 
 import '@/assets/styles/Login.scss'
+import {UsernameInput} from "@/common/Input";
 
 export default class Login extends Component {
 
-    auth = (event, handleLogin) => {
+    state = {
+        username: ''
+    };
+
+    handleUsername = username => this.setState({username});
+
+    submitUsername = event => {
         event.preventDefault();
-        const name = this.input.value;
-        if (!name || !name.trim().length) {
-            return
-        }
-        this.input.value = '';
-        handleLogin(name)
+        const {valid, value} = this.state.username;
+        valid && this.props.handleLogin(value)
     };
 
     render() {
-        const {handleLogin} = this.props;
+        const {username} = this.state;
+
         return (
-            <form className="login" onSubmit={(event) => this.auth(event, handleLogin)}>
-                <input
+            <form className="login" onSubmit={this.submitUsername}>
+                <UsernameInput
+                    value={username}
+                    handleChange={this.handleUsername}
                     ref={input => this.input = input}
-                    type="text"
                     placeholder="Type your name"
                     className='login-input'
                 />
