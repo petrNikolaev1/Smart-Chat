@@ -9,6 +9,7 @@ import LoggedIn from '@/components/LoggedIn';
 import constants from '@/constants'
 import {loginInfo, chatWith} from '@/actions'
 import '@/assets/styles/ChatWrap.scss'
+import {wsAction} from "@/actions/wsActions";
 
 /*
 Chat-wrapper Container that contains both PeopleList and MessagesList.
@@ -17,12 +18,13 @@ the corresponding info is displayed in the MessagesList.
  */
 
 @connect(store => ({
-        loginSuccess: store.loginReducer,
+        login: store.loginReducer,
         username: store.loginInfoReducer,
         chatWith: store.chatWithReducer
     }), {
         handleLoginInfo: loginInfo,
-        handleChatWith: chatWith
+        handleChatWith: chatWith,
+        wsAction
     }
 )
 export default class ChatWrap extends Component {
@@ -33,16 +35,19 @@ export default class ChatWrap extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.loginSuccess[0] === false) {
+        if (nextProps.login[0] === false) {
             alert('This username is already taken, please chose another one!');
             return;
-        } else if (nextProps.loginSuccess[0] === true && nextProps.loginSuccess !== this.props.loginSuccess) {
+        } else if (nextProps.login[0] === true && nextProps.login !== this.props.login) {
             localStorage.setItem('auth', this.tryUsername);
             this.props.handleLoginInfo(this.tryUsername)
         }
     }
 
     render() {
+        const {login} = this.props;
+        console.log('RENDER', login)
+
         return (
             <div className='chat-wrap'>
                 <div className='chat-wrap-left'>
@@ -73,10 +78,8 @@ export default class ChatWrap extends Component {
 
 
     handleLogin = (username) => {
-        if (!username || !username.trim().length) {
-            return
-        }
         this.tryUsername = username;
-        ws.emit(JSON.stringify({type: 'connected_new_user', data: username}))
+        // ws.emit(JSON.stringify({type: 'connected_new_user', data: username}));
+        this.props.wsAction({actionType: constants.LOGIN_REQUEST, wsType: 'connected_new_user', wsData: username})
     }
 }

@@ -12,6 +12,7 @@ import publicTypingReducer from './publicTyping'
 import privateTypingReducer from './privateTyping'
 import loginInfoReducer from './loginInfo'
 import chatWithReducer from './chatWith'
+import {stringsReducer} from "./stringsReducer";
 
 const chatReducer = combineReducers({
 	loginReducer,
@@ -25,7 +26,8 @@ const chatReducer = combineReducers({
 	publicTypingReducer,
 	privateTypingReducer,
 	loginInfoReducer,
-	chatWithReducer
+	chatWithReducer,
+	stringsReducer
 });
 
 export default chatReducer
